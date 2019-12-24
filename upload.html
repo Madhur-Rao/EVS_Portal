@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Upload</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#110133;">
+
+    <div class="container-fluid" style="padding-top: 80px; max-width: 90%;">
+
+        <!-- Upload file from PC, Caption it -->
+        <div class="card" style=" background-color:grey; margin:2%;">
+            <div class="card-body" style="padding: 30px;">
+
+                <h2 class="text-center">Upload a file</h2>
+                <hr class="my-4">
+                <form method="POST" action="upload.php" enctype="multipart/form-data">
+
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <div style="min-height: 150px">
+                                <h4>Image</h4>
+                                <img src="img/image.png" style="max-width :100px;">
+                            </div>
+                            <div class="text-center" style="padding:30px;">
+                                <input type="file" id="file_img" name="file_img" style="border :1px solid black;">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <div style="min-height: 150px">
+                                <h4 class="text-center">Video</h4>
+                                <img src="img/video.png" style="max-width: 100px;">
+                            </div>
+                            <div class="text-center" style="padding:30px;">
+                                <input type="file" id="file_vid" name="file_vid" style="border :1px solid black;">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <div style="min-height: 150px">
+                                <h4 class="text-center">Text</h4>
+                                <img src="img/text.png" style="max-width: 100px;">
+                            </div>
+
+                            <div class="text-center" style="padding:30px;">
+                                <input type="file" id="file_txt" name="file_txt" style="border :1px solid black;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center" style="padding:0 0 30px 0;">
+                        <input type="text" name="heading_txt" id="heading_txt" placeholder="Heading">
+                    </div>
+
+                    <div class="text-center mb-3">
+                        <input type="text" name="caption_txt" id="caption_txt" placeholder="caption">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" name="submit" class="btn btn-dark">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Paste a link from the web, Caption it -->
+        <div class="card" style=" background-color: grey; margin:2%; margin-top:50px;">
+            <div class="card-body" style="padding: 30px;">
+
+                <h2 class="text-center">Paste a link</h2>
+                <form method="POST" action="upload.php" enctype="multipart/form-data">
+
+                    <div class="text-center" style="padding:20px 0 30px 0;">
+                        <input type="url" id="url_paste" name="url_paste" placeholder="https://www.youtube.com/ ">
+                    </div>
+
+                    <div class="text-center" style="padding:0 0 30px 0;">
+                        <input type="text" name="heading_url" id="heading_url" placeholder="Heading">
+                    </div>
+
+                    <div class="text-center mb-3">
+                        <input type="text" name="caption_url" id="caption_url" placeholder="caption">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" name="submit" class="btn btn-dark">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
